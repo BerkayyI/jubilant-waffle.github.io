@@ -1,0 +1,70 @@
+.hamburger {
+    //Variables
+    margin: 10px;
+    $width: 4rem;
+    $height: 3.5rem;
+    // Layout
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: $width;
+    height: $height;
+    // Spacing
+    /* flex-basis: 4rem;
+    flex-grow: 0;
+    flex-shrink: 0; */
+
+    > *:nth-child(1),
+    > *:nth-child(2),
+    > *:nth-child(3) {
+        display: block;
+        width: 100%;
+        height: 0.8rem;
+        background-color: $dark-color;
+        transition: 0.233s;
+        border-radius: 15px;
+    }
+
+    //States modifiers
+    &--state-opened {
+        box-sizing: border-box;
+        > *:nth-child(2) {
+            opacity: 0;
+            transition: 0s;
+        }
+
+        > *:nth-child(1) {
+            top: 50%;
+            position: absolute;
+            transform: translate(0, -50%) rotate(45deg);
+            transition: 0.4s;
+        }
+
+        > *:nth-child(3) {
+            top: 50%;
+            position: absolute;
+            transform: translate(0, -50%) rotate(-45deg);
+            transition: 0.4s;
+        }
+    }
+    &--state-closed {
+        > *:nth-child(1),
+        > *:nth-child(2),
+        > *:nth-child(3) {
+            display: block;
+            width: 100%;
+            height: 0.8rem;
+            background-color: white;
+            transition: 0.133s;
+        }
+    }
+
+    // Skin
+    /* outline: 3px dashed black; */
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
