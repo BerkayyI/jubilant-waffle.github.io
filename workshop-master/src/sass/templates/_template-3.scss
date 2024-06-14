@@ -1,0 +1,239 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: lightcoral;
+}
+
+.template-3 {
+    max-width: 75rem;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    height: auto;
+
+    .main-fieldset {
+        padding: $default-spacer;
+        border: none;
+        border-radius: 15px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .profile-picture {
+        text-align: center;
+
+        > img {
+            border-radius: 50%;
+            transform: scale(1.5);
+        }
+        > figcaption {
+            position: relative;
+            width: 30%;
+            margin: 0 auto;
+            border-radius: 15px;
+            font-size: x-large;
+            border: 1px solid rgb(163, 163, 163);
+            background-color: rgb(255, 255, 255);
+        }
+    }
+    legend {
+        font-size: 22px;
+        padding: 4px;
+        border-radius: 15px;
+    }
+
+    .input-fieldset-container {
+        border-radius: 15px;
+        background-color: rgba(158, 158, 158, 0.623);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: $default-spacer;
+
+        .login-fieldset {
+            width: auto;
+            padding: $default-spacer;
+            display: flex;
+            flex-direction: column;
+            /* border: 1px solid #666; */
+            flex: 1;
+            > label {
+                /* border: 1px solid red; */
+                font-size: 20px;
+                margin-top: $default-spacer;
+            }
+
+            > input {
+                display: block;
+                border: none;
+                border-radius: 15px;
+                text-align: center;
+                width: 50%;
+                height: 2rem;
+                margin-top: 5px;
+
+                > input:valid::after {
+                    content: "Valid input!";
+                    color: #2ecc71;
+                    font-size: 0.8rem;
+                    padding-left: 10px;
+                }
+
+                > input:invalid::after {
+                    content: "Invalid input. Please try again.";
+                    color: #e74c3c;
+                    font-size: 0.8rem;
+                    padding-left: 10px;
+                }
+            }
+
+            input[type="checkbox"] {
+                /* styles for the radio button itself */
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+                border-radius: 50%;
+                background-color: rgb(255, 255, 255);
+                border-radius: 15px;
+                border: 1px solid #ccc;
+                appearance: none; /* remove default browser styling */
+                cursor: pointer;
+
+                &:checked {
+                    /* styles for the checked state */
+                    background-color: #666;
+                    border-color: #666;
+                }
+            }
+        }
+        .personal-details-fieldset {
+            padding: $default-spacer;
+            /* border: 1px solid #666; */
+            display: flex;
+            width: auto;
+            flex-direction: column;
+            flex: 1;
+            > label {
+                font-size: 20px;
+                margin-top: $default-spacer;
+            }
+            > select {
+                width: 50%;
+                border: none;
+                border-radius: 15px;
+                text-align: center;
+                width: 50%;
+                height: 2rem;
+                margin-top: 5px;
+            }
+
+            .radio-buttons {
+                border: none;
+                margin-top: $default-spacer;
+                border: 1px solid rgb(163, 163, 163);
+                border-radius: 15px;
+                .radio-buttons-box {
+                    display: grid;
+                    margin: 5px;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+
+                    font-size: 20px;
+                    > label {
+                        margin: 0 $default-spacer;
+                    }
+
+                    input[type="radio"] {
+                        /* styles for the radio button itself */
+                        width: 20px;
+                        background-color: rgb(255, 255, 255);
+                        border-radius: 15px;
+                        height: 20px;
+                        margin-right: 10px;
+                        border-radius: 50%;
+                        border: 1px solid #ccc;
+                        appearance: none; /* remove default browser styling */
+                        cursor: pointer;
+
+                        &:checked {
+                            /* styles for the checked state */
+                            background-color: #666;
+                            border-color: #666;
+                        }
+                    }
+                }
+            }
+
+            .textarea-container {
+                display: flex;
+                flex-direction: column;
+                width: 25rem;
+                textarea {
+                    border-radius: 10px;
+                    padding: 5px;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 2rem;
+                    max-height: 12rem;
+                }
+            }
+        }
+    }
+
+    .button-container {
+        display: flex;
+        font-size: 20px;
+        justify-content: right;
+
+        > button[type="submit"] {
+            border: none;
+            border-radius: 15px;
+            padding: 1rem;
+            background-color: rgb(0, 160, 0);
+            color: white;
+            margin: $default-spacer;
+            transition: 0.25s ease-in-out;
+        }
+        > button[type="reset"] {
+            padding: 1rem;
+            border-radius: 15px;
+            color: rgb(0, 160, 0);
+            border: 1px solid rgb(0, 160, 0);
+            margin: $default-spacer;
+            transition: 0.25s ease-in-out;
+        }
+
+        > button[type="submit"]:hover {
+            transform: scale(1.12);
+            opacity: 0.9;
+        }
+        > button[type="reset"]:hover {
+            transform: scale(1.12);
+            opacity: 0.9;
+        }
+    }
+    .loading-bar {
+        height: 1.5rem;
+        border-radius: 10px;
+        background-color: green;
+        width: 0%;
+        transition: width 10s ease-in-out; /* transition background position */
+    }
+
+    .loading--state-opened {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .template-3 {
+        max-width: 100%;
+        width: 100%;
+        padding: 10px;
+    }
+}

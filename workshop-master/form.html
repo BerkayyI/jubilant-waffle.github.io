@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="assets/css/style.css" />
+        <title>Anmeldeformular</title>
+    </head>
+    <body>
+        <div class="template-3">
+            <form
+                action=""
+                id="registration">
+                <fieldset class="main-fieldset">
+                    <legend></legend>
+
+                    <figure class="profile-picture">
+                        <img
+                            src="https://picsum.photos/id/64/200"
+                            alt="" />
+                        <figcaption>Lorem Bildbeschreibung</figcaption>
+                    </figure>
+                    <div class="input-fieldset-container">
+                        <fieldset class="login-fieldset">
+                            <legend>Anmeldedaten</legend>
+
+                            <label for="email">E-Mail</label>
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="example@email.com"
+                                id="email" />
+
+                            <label for="password">Passwort</label>
+                            <input
+                                type="password"
+                                name="password-1"
+                                id="password"
+                                placeholder="Passwort erfinden" />
+                            <input
+                                type="password"
+                                name="password-2"
+                                placeholder="Passwort wiederholen" />
+
+                            <label
+                                ><input
+                                    type="checkbox"
+                                    name="terms" />AGBs</label
+                            >
+                            <label
+                                ><input
+                                    type="checkbox"
+                                    name="ads" />Werbung</label
+                            >
+                        </fieldset>
+
+                        <fieldset class="personal-details-fieldset">
+                            <legend>Persönliche Angaben</legend>
+
+                            <label for="instrument">Instrument</label>
+                            <select
+                                name="instrument"
+                                id="instrument">
+                                <option
+                                    selected
+                                    value="">
+                                    Schlagzeug
+                                </option>
+                                <option value="">Klavier</option>
+                                <option value="">Flöte</option>
+                                <option value="">Cembalo</option>
+                            </select>
+
+                            <fieldset class="radio-buttons">
+                                <legend>Niveau</legend>
+                                <div class="radio-buttons-box">
+                                    <label
+                                        ><input
+                                            type="radio"
+                                            name="level" />Anfänger</label
+                                    >
+                                    <label
+                                        ><input
+                                            type="radio"
+                                            name="level" />Fortgeschritten</label
+                                    >
+                                </div>
+                                <div class="radio-buttons-box">
+                                    <label
+                                        ><input
+                                            type="radio"
+                                            name="level" />Amateur</label
+                                    >
+                                    <label
+                                        ><input
+                                            type="radio"
+                                            name="level" />Profi</label
+                                    >
+                                </div>
+                            </fieldset>
+
+                            <div class="textarea-container">
+                                <label for="notes">Notizen</label>
+                                <textarea
+                                    name="notes"
+                                    id="notes"
+                                    placeholder="Text writing area"></textarea>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="button-container">
+                        <button type="reset">Abbrechen</button>
+                        <button class="submit-button" type="submit">Abschicken</button>
+                    </div>
+                    <div class="loading-bar"></div>
+                    
+                </fieldset>
+            </form>
+        </div>
+        <script
+                defer
+                src="assets/js/animation-button.js"></script>
+    </body>
+</html>

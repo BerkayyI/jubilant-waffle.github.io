@@ -1,0 +1,85 @@
+// SASS Import another SASS File
+//Variables must be on top always
+@import "variables";
+@import "mixins";
+//Reset normalize
+@import "base/reset";
+// Basis Style z.B. Typografie
+@import "base/base";
+@import "base/typography";
+@import "base/colors";
+// Template
+@import "templates/template-1";
+@import "templates/template-2";
+@import "templates/template-3";
+// Components
+@import "components/nav";
+@import "components/hamburger";
+// - - -- - -- - - -- - -
+// - - -- - -- - - -- - -
+// - - -- - -- - - -- - -
+// - - -- - -- - - -- - -
+//Themen, Skins must be always on bottom
+@import "themes/customer-typography";
+@import "themes/luppe";
+@import "themes/customer-theme";
+@import "themes/developer";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+// Sass Variables
+$bright: white;
+$dark: black;
+
+//Css Variables
+
+:root{
+    --bright: white;
+    --dark: black;
+}
+
+
+body {
+    background-color: $dark;
+    color: $bright;
+    // css variable usage
+    background-color: var(--dark);
+    color: var(--bright);
+
+}
+
+
+table{
+    $bright: lightgrey;
+    $dark: darkgrey;
+}
+ */
+
+
